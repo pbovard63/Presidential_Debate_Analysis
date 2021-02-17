@@ -131,3 +131,4 @@ dmypy.json
 #Data files:
 .pickle
 .csv
+Data/initial_term_document_matrix.pickle

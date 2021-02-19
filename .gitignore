@@ -132,3 +132,8 @@ dmypy.json
 .pickle
 .csv
 Data/initial_term_document_matrix.pickle
+Data/app_speaker_list_filtered.pickle
+Data/app_transcript_list_filtered.pickle
+Data/cpd_speaker_list_filtered.pickle
+Data/cpd_transcript_list_filtered.pickle
+Data/final_speaker_df.pickle

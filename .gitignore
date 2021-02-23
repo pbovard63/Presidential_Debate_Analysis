@@ -138,3 +138,6 @@ Data/cpd_speaker_list_filtered.pickle
 Data/cpd_transcript_list_filtered.pickle
 Data/final_speaker_df.pickle
 Data/cleaned_string_df.pickle
+Data/cleaned_string_df.pickle
+Data/cleaned_string_df.pickle
+*.pickle

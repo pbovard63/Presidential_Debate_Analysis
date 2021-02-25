@@ -143,3 +143,4 @@ Data/cleaned_string_df.pickle
 *.pickle
 *.pickle
 *.pickle
+*.csv

@@ -23,7 +23,7 @@ os.environ["webdriver.chrome.driver"] = chromedriver
 def cpd_individual_soup_maker(link):
     '''
     Arguments: takes in a link, and creates a BeautifulSoup object for that page.
-    Returns: a BeatifulSoup Object.
+    Returns: a BeatifulSoup Object for the given link.
     '''
     if link[0:3] == '/vo':
         link = 'https://www.debates.org' + link
@@ -35,7 +35,7 @@ def cpd_individual_soup_maker(link):
 def cpd_soup_maker(link):
     '''
     Arguments: takes in the URL for the Commission on Presidential Debates site, for Debate transcripts.
-    Returns: a BeautifulSoup object of the given links.
+    Returns: a BeautifulSoup object of the given links located on the CPD homepage.
     '''
     #Creating a BeautifulSoup Object from the CPD homepage:
     response = requests.get(link)
@@ -54,7 +54,7 @@ def cpd_transcript_puller(link):
     '''
     Arguments: takes in a link to the Commission for Presidential Debate homepage.
     Returns: a list of transcripts from Presidential Debates, 1960-present.  
-    Utilized: cpd_soup_maker and individual_soup_maker functions.
+    Utilized: cpd_soup_maker and cpd_individual_soup_maker functions.
     '''
     #Running the cpd_soup_maker function to get the list of BeautifulSoupObjects:
     soup_list = cpd_soup_maker(link)
@@ -69,7 +69,7 @@ def cpd_transcript_puller(link):
 
 def cpd_url_puller(links):
     '''
-    Arguments: takes in the URL for aCommission for Presidential Debates debate transcript.
+    Arguments: takes in the URL for Commission for Presidential Debates debate transcript.
     Returns: a BeautifulSoup object of the given links.
     '''
     #Creating a BeautifulSoup Object from the CPD homepage:
@@ -133,7 +133,7 @@ def app_individual_soup_maker(link):
 def app_soup_maker(link):
     '''
     Arguments: takes in the URL for the American Presidency Project debates site, for Debate transcripts.
-    Returns: a BeautifulSoup object of the given links.
+    Returns: a BeautifulSoup object of the given links on the APP main page.
     '''
     #Creating a BeautifulSoup Object from the CPD homepage:
     response = requests.get(link)
@@ -221,7 +221,7 @@ def app_group_speaker_puller(link_list):
 def app_url_puller(link):
     '''
     Arguments: takes in the URL for an American Presidency Project debate transcript.
-    Returns: a BeautifulSoup object of the given links.
+    Returns: a BeautifulSoup object of the given links on the APP homepage.
     '''
     #Creating a BeautifulSoup Object from the CPD homepage:
     response = requests.get(link)
